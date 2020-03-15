@@ -1,11 +1,11 @@
 # Grupa3-TripleA
 Tema: Biblioteka
 # Team members
-Aya Ali Al Zayat
+• Aya Ali Al Zayat
 
-Ajdin Bečirović
+• Ajdin Bečirović
 
-Asim Ćeman
+• Asim Ćeman
 
 # Opis projekta
 //dodat poslije nemam motivacije xd
