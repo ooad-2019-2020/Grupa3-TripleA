@@ -61,7 +61,7 @@ Bibliotekar:
 
 # Akteri
 
-• Guest - neprijavljeni posjetilac aplikacije koji ima mogucnost da kreira akaunt ili da pregleda ponudu biblioteke i osnovne informacije
+• Guest - neprijavljeni posjetilac aplikacije koji ima mogucnost da kreira korisnicki racun ili da pregleda ponudu biblioteke i osnovne informacije
 
 • Normal user - prijavljeni korisnik koji moze vrsiti recenziju i rezervaciju knjiga
 
