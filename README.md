@@ -1,14 +1,14 @@
 # Grupa3-TripleA
 Tema: Biblioteka
 # Team members
-• Aya Ali Al Zayat
+Aya Ali Al Zayat
 
-• Ajdin Bečirović
+Ajdin Bečirović
 
-• Asim Ćeman
+Asim Ćeman
 
 # Opis projekta
-//dodat poslije nemam motivacije xd
+Kako bi privukla veci broj korisnika jedna sarajevska biblioteka odlucuju uvesti novu aplikaciju pri radu sa klijentima. Ova aplikacija omogucuje klijentima pregled knjiga i njihovu rezervaciju. Namijenjenima svim ljubiteljima knjiga, skolarcima i studentima ova aplikacija ubrzava i pojednostavljuje rutinu iznajmljivanja knjiga, te svojim vjernim korisnicima nudi i brojne druge pogodnosti! Uclanite se sad i uronite u magicni svijet maste i nauke. 
 
 # Funkcionalnosti sistema
 Korisnik:
