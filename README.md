@@ -29,6 +29,10 @@ Korisnik:
 
 • Mogucnost podesavanja profila i pregleda njegovih aktivnosti u biblioteci
 
+• Mogucnost posjecivanja linka na webu koji sadrzi opis knjige
+
+• Mogucnost online placanja clanarine
+
 Administrator:
 
 • Mogucnost dodavanja novih naslova i brisanja naslova koji dugo nisu koristeni
@@ -45,4 +49,19 @@ Bibliotekar:
 
 • Vrsi evidenciju placanja clanarine
 
-• 
+• Mogucnost provjere i odobravanja zahtjeva i rezervacija
+
+• Vrsi evidenciju posudjivanja knjiga
+
+• Mogucnost sastavljanja preporuke i top naslova za svaku sedmicu
+
+• Mogucnost prebacivanja obicnih korisnika u VIP status
+
+# Akteri
+
+• Guest - neprijavljeni posjetilac aplikacije koji ima mogucnost da kreira akaunt ili da pregleda ponudu biblioteke i osnovne informacije
+
+• Normal user - prijavljeni korisnik koji moze vrsiti recenziju i rezervaciju knjiga
+
+• VIP user - korisnik koji ima posebne privilegije i prioritet pri rezervaciji knjiga. VIP status se stjece dodatnom doplatom ili aktivnoscu u koristenju aplikacije
+
