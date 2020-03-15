@@ -7,7 +7,7 @@ Ajdin Bečirović
 
 Asim Ćeman
 
-![logo](https://www.google.com/search?q=mongryong&client=opera&hs=hLJ&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiSqquttJ3oAhWLHHcKHTSjAgwQ_AUoAXoECA4QAw#imgrc=5CPyz_A-Q3ikqM)
+![logo](https://cdn130.picsart.com/314732677122201.jpg?type=webp&to=min&r=1024)
 
 # Opis projekta
 Kako bi privukla veci broj korisnika jedna sarajevska biblioteka odlucuju uvesti novu aplikaciju pri radu sa klijentima. Ova aplikacija omogucuje klijentima pregled knjiga i njihovu rezervaciju. Namijenjenima svim ljubiteljima knjiga, skolarcima i studentima ova aplikacija ubrzava i pojednostavljuje rutinu iznajmljivanja knjiga, te svojim vjernim korisnicima nudi i brojne druge pogodnosti! Uclanite se sad i uronite u magicni svijet maste i nauke. 
