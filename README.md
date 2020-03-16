@@ -17,7 +17,7 @@ Korisnik:
 
 • Mogucnost pregleda dostupnih knjiga u biblioteci 
 
-• Mogucnost stjecanja i prekida clanstva u biblioteci 
+• Mogucnost sticanja i prekida clanstva u biblioteci 
 
 • Ostavljanje feedbacka za rad sistema
 
@@ -27,7 +27,7 @@ Korisnik:
 
 • Mogucnost ostavljanja recenzija za svaku vracenu knjigu
 
-• Mogucnost stjecanje VIP statusa koji pruza mnoge pogodnosti korisniku
+• Mogucnost sticanje VIP statusa koji pruza mnoge pogodnosti korisniku
 
 • Mogucnost podesavanja profila i pregleda njegovih aktivnosti u biblioteci
 
@@ -39,7 +39,7 @@ Administrator:
 
 • Mogucnost dodavanja novih naslova i brisanja naslova koji dugo nisu koristeni
 
-• Mogucnost azuriranja About stranice za biblioteku ali i za pojedina djela
+• Mogucnost azuriranja About stranice za biblioteku i pojedinih djela
 
 • Mogucnost povecavanja i smanjivanja maksimalnog broja knjiga
 
