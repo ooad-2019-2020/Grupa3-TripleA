@@ -67,3 +67,7 @@ Bibliotekar:
 
 • VIP user - korisnik koji ima posebne privilegije i prioritet pri rezervaciji knjiga. VIP status se stice dodatnom doplatom ili aktivnoscu u koristenju aplikacije
 
+• Bibliotekar - zaposlenik koji se brine o knjigama
+
+• Administrator - zaposlenik se bavi administrativnim poslovima
+
