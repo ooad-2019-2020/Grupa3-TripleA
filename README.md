@@ -13,7 +13,7 @@ Asim Ćeman
 Kako bi privukla veci broj korisnika jedna sarajevska biblioteka odlucuju uvesti novu aplikaciju pri radu sa klijentima. Ova aplikacija omogucuje klijentima pregled knjiga i njihovu rezervaciju. Namijenjenima svim ljubiteljima knjiga, skolarcima i studentima ova aplikacija ubrzava i pojednostavljuje rutinu iznajmljivanja knjiga, te svojim vjernim korisnicima nudi i brojne druge pogodnosti! Uclanite se sad i uronite u magicni svijet maste i nauke. 
 
 # Funkcionalnosti sistema
-Korisnik:
+# Korisnik:
 
 • Mogucnost pregleda dostupnih knjiga u biblioteci 
 
@@ -35,7 +35,7 @@ Korisnik:
 
 • Mogucnost online placanja clanarine
 
-Administrator:
+# Administrator:
 
 • Mogucnost dodavanja novih naslova i brisanja naslova koji dugo nisu koristeni
 
@@ -47,7 +47,7 @@ Administrator:
 
 • Mogucnost brisanje nekoristenih profila i profila koji duze vrijeme nisu vratili knjigu 
 
-Bibliotekar:
+# Bibliotekar:
 
 • Vrsi evidenciju placanja clanarine
 
