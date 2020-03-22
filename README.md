@@ -1,11 +1,11 @@
 # Grupa3-TripleA
 Tema: Biblioteka
 # Team members
-Aya Ali Al Zayat
+*Aya Ali Al Zayat*
 
-Ajdin Bečirović
+*Ajdin Bečirović*
 
-Asim Ćeman
+*Asim Ćeman*
 
 ![logo](https://cdn130.picsart.com/314732677122201.jpg?type=webp&to=min&r=1024)
 
