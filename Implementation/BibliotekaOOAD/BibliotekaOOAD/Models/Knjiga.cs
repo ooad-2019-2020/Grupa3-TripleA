@@ -10,18 +10,20 @@ namespace BibliotekaOOAD.Models
         int id;
         string naslov, autor, opis;
         decimal rating;
-        List<Zanr> zanrovi = new List<Zanr>();
+        ICollection<Zanr> zanrovi;
         ObicniKorisnik korisnikKojiJePosudio;
-        List<Recenzija> recenzije = new List<Recenzija>();
+        ICollection<Recenzija> recenzije;
 
         public int Id { get => id; set => id = value; }
         public string Naslov { get => naslov; set => naslov = value; }
         public string Autor { get => autor; set => autor = value; }
         public string Opis { get => opis; set => opis = value; }
         public decimal Rating { get => rating; set => rating = value; }
-        public List<Zanr> Zanrovi { get => zanrovi; set => zanrovi = value; }
+        
         public ObicniKorisnik KorisnikKojiJePosudio { get => korisnikKojiJePosudio; set => korisnikKojiJePosudio = value; }
-        public List<Recenzija> Recenzije { get => recenzije; set => recenzije = value; }
+        
+        public ICollection<Zanr> Zanrovi { get => zanrovi; set => zanrovi = value; }
+        public ICollection<Recenzija> Recenzije { get => recenzije; set => recenzije = value; }
 
         public Knjiga dajKnjigu()
         {

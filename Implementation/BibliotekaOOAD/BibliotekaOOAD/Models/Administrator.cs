@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace BibliotekaOOAD.Models
 {
-    public class Administrator
+    public class Administrator : Osoba
     {
         int brojLoginova;
 

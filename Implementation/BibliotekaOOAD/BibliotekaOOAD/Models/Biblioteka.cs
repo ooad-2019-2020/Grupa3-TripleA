@@ -8,12 +8,20 @@ namespace BibliotekaOOAD.Models
     public class Biblioteka : IPratilac, IKorisnik
     {
         Gost gost;
-        List<Osoba> clanovi = new List<Osoba>();
-        List<Knjiga> knjige = new List<Knjiga>();
+        ICollection<Osoba> clanovi;
+        ICollection<Knjiga> knjige;
         Administrator administrator;
         string info;
         IKorisnik factory;
-        List<IPratilac> pratioci = new List<IPratilac>();
+        ICollection<IPratilac> pratioci;
+
+        public Gost Gost { get => gost; set => gost = value; }
+        public ICollection<Osoba> Clanovi { get => clanovi; set => clanovi = value; }
+        public ICollection<Knjiga> Knjige { get => knjige; set => knjige = value; }
+        public Administrator Administrator { get => administrator; set => administrator = value; }
+        public string Info { get => info; set => info = value; }
+        internal IKorisnik Factory { get => factory; set => factory = value; }
+        internal ICollection<IPratilac> Pratioci { get => pratioci; set => pratioci = value; }
 
         public Osoba dajKorisnika()
         {

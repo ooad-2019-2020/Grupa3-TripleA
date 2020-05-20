@@ -8,6 +8,7 @@ namespace BibliotekaOOAD.Models
 {
     public class Recenzija
     {
+        int id;
         string tekstRecenzije;
         int brojZvjezdica;
         DateTime datumObjave;
@@ -21,5 +22,6 @@ namespace BibliotekaOOAD.Models
         public Knjiga Knjiga { get => knjiga; set => knjiga = value; }
         public bool NeprimjerenSadrzaj { get => neprimjerenSadrzaj; set => neprimjerenSadrzaj = value; }
         public ObicniKorisnik Korisnik { get => korisnik; set => korisnik = value; }
+        public int Id { get => id; set => id = value; }
     }
 }

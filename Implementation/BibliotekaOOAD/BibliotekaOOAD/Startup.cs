@@ -12,6 +12,7 @@ using BibliotekaOOAD.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using AspNetCoreMVC.Models;
 
 namespace BibliotekaOOAD
 {
@@ -29,7 +30,14 @@ namespace BibliotekaOOAD
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+                    Configuration.GetConnectionString("DbConnection")));
+
+            services.AddDbContext<TripleContext>(options =>
+                options.UseSqlServer
+                    (Configuration.GetConnectionString("DbConnection")));
+
+
+
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();

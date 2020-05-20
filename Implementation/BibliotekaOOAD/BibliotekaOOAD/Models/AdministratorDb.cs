@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 
 namespace BibliotekaOOAD.Models
 {
-    public class Gost
+    public class AdministratorDb
     {
         int id;
+        int brojLoginova;
 
-        int brojPosjete;
-
-        public int BrojPosjete { get => brojPosjete; set => brojPosjete = value; }
+        public int BrojLoginova { get => brojLoginova; set => brojLoginova = value; }
         public int Id { get => id; set => id = value; }
     }
 }
+
