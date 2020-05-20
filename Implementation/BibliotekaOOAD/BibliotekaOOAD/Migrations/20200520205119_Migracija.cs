@@ -45,14 +45,14 @@ namespace BibliotekaOOAD.Migrations
                     table.PrimaryKey("PK_Gost", x => x.Id);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "PlacanjeClanarine",
-                columns: table => new
-                {
-                },
-                constraints: table =>
-                {
-                });
+           // migrationBuilder.CreateTable(
+             //   name: "PlacanjeClanarine",
+               // columns: table => new
+                //{
+                //},
+                //constraints: table =>
+                //{
+                //});
 
             migrationBuilder.CreateTable(
                 name: "Racun",
