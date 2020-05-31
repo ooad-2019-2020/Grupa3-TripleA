@@ -6,6 +6,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BiblitekaAPI;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace BiblitekaAPI.Controllers
 {
@@ -22,9 +26,39 @@ namespace BiblitekaAPI.Controllers
 
         // GET: api/Knjigas
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Knjiga>>> GetKnjiga()
+        public async Task<ActionResult<List<Knjiga>>> GetKnjiga()
         {
-            return await _context.Knjiga.ToListAsync();
+            string apiUrl = "https://api.nytimes.com/";
+            List<Knjiga> knjige = new List<Knjiga>();
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(apiUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                HttpResponseMessage Res = await client.GetAsync("/svc/books/v3/lists.json?list-name=hardcover-fiction&api-key=ywXWXpAo14Rj2Xc9GYZifOIqhVt7hzDy");
+
+                //Provjera da li je rezultat uspješan
+                if (Res.IsSuccessStatusCode)
+                {
+                    var response = Res.Content.ReadAsStringAsync().Result; //string svega napravljen
+                    JObject joResponse = JObject.Parse(response);
+                    JArray results = (JArray)joResponse["results"];
+                    for(int i=0; i< results.Count; i++) {
+                        JArray array = (JArray)results[i]["book_details"];
+                        Knjiga knjiga = new Knjiga();
+                        knjiga.Naslov = (string)(array[0]["title"].ToString());
+                        knjiga.Autor = (string)(array[0]["author"].ToString());
+                        knjiga.Opis = (string)(array[0]["description"].ToString());
+                        knjige.Add(knjiga);
+                    }
+
+                    foreach(Knjiga k in knjige) {
+                        _context.Add(k);
+                        await _context.SaveChangesAsync();
+                    }
+                }
+                return await _context.Knjiga.ToListAsync();
+            }
         }
 
         // GET: api/Knjigas/5

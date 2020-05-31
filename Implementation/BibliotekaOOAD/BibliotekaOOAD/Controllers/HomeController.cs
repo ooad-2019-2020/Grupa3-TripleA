@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using BibliotekaOOAD.Models;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using Newtonsoft.Json;
 
 namespace BibliotekaOOAD.Controllers
 {
@@ -37,6 +40,26 @@ namespace BibliotekaOOAD.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [HttpGet]
+        public async Task<RedirectToActionResult> DodajTop15()
+        {
+            string apiUrl = "https://bibliotekaapi.azurewebsites.net/";
+            List<Knjiga> knjige = new List<Knjiga>();
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(apiUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                HttpResponseMessage Res = await client.GetAsync("api/Knjigas");
+                if (Res.IsSuccessStatusCode)
+                {
+                    var response = Res.Content.ReadAsStringAsync().Result;
+                    knjige = JsonConvert.DeserializeObject<List<Knjiga>>(response);
+                }
+                return RedirectToAction("Index");
+            }
         }
     }
 }
