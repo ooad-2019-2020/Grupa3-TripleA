@@ -52,7 +52,7 @@ namespace BibliotekaOOAD.Controllers
                 client.BaseAddress = new Uri(apiUrl);
                 client.DefaultRequestHeaders.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                HttpResponseMessage Res = await client.GetAsync("api/Knjigas");
+                HttpResponseMessage Res = await client.GetAsync("/api/Knjigas");
                 if (Res.IsSuccessStatusCode)
                 {
                     var response = Res.Content.ReadAsStringAsync().Result;
