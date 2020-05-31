@@ -50,8 +50,13 @@ namespace BiblitekaAPI.Controllers
                         knjiga.Autor = (string)(array[0]["author"].ToString());
                         knjiga.Opis = (string)(array[0]["description"].ToString());
                         knjige.Add(knjiga);
+                        foreach(Knjiga k in _context.Knjiga.ToArray()) {
+                                if(k.Naslov.Equals(knjiga.Naslov)) {
+                                    knjige.Remove(knjiga);
+                                    break;
+                                }
+                        }
                     }
-
                     foreach(Knjiga k in knjige) {
                         _context.Add(k);
                         await _context.SaveChangesAsync();
