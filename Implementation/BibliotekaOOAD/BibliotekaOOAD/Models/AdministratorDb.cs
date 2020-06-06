@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 
 namespace BibliotekaOOAD.Models
 {
@@ -12,6 +15,8 @@ namespace BibliotekaOOAD.Models
 
         public int BrojLoginova { get => brojLoginova; set => brojLoginova = value; }
         public int Id { get => id; set => id = value; }
+        
+
     }
 }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace BibliotekaOOAD.Models
 {
@@ -14,6 +15,7 @@ namespace BibliotekaOOAD.Models
             ICollection<IKnjiga> procitaneKnjige;
             DateTime krajVazenjaClanarine;
 
+        [Required(ErrorMessage = "Polje korisnicko ime je obavezno")]
         public string KorisnickoIme { get => korisnickoIme; set => korisnickoIme = value; }
         public Racun Racun { get => racun; set => racun = value; }
         public DateTime DatumRodjenja { get => datumRodjenja; set => datumRodjenja = value; }
