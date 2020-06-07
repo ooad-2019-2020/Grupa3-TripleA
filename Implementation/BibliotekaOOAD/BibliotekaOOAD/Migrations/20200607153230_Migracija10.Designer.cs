@@ -4,14 +4,16 @@ using AspNetCoreMVC.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BibliotekaOOAD.Migrations
 {
     [DbContext(typeof(TripleContext))]
-    partial class TripleContextModelSnapshot : ModelSnapshot
+    [Migration("20200607153230_Migracija10")]
+    partial class Migracija10
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -362,16 +364,6 @@ namespace BibliotekaOOAD.Migrations
                     b.HasIndex("RacunId");
 
                     b.HasDiscriminator().HasValue("ObicniKorisnik");
-                });
-
-            modelBuilder.Entity("BibliotekaOOAD.Models.VipKorisnik", b =>
-                {
-                    b.HasBaseType("BibliotekaOOAD.Models.ObicniKorisnik");
-
-                    b.Property<decimal>("OstvareniPopust")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasDiscriminator().HasValue("VipKorisnik");
                 });
 
             modelBuilder.Entity("BibliotekaOOAD.Models.Biblioteka", b =>

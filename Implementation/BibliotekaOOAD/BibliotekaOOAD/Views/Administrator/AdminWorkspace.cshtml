@@ -1,0 +1,31 @@
+﻿@model BibliotekaOOAD.Models.Administrator
+
+@{
+    ViewData["Title"] = "Workspace";
+}
+
+    <h1>Administrator</h1>
+<div>
+    <input type="button" value="Pregledaj obicne korisnike" onclick="location.href='@Url.Action("Index", "ObicniKorisnik")'" />
+    <h1> </h1>
+</div>
+<div>
+    <input type="button" value="Pregledaj vip korisnike" onclick="location.href='@Url.Action("Index", "VipKorisnik")'" />
+    <h1> </h1>
+</div>
+<div>
+    <input type="button" value="Pregledaj zahtjeve za nove naslove" onclick="location.href='@Url.Action("PregledZahtjeva", "Administrator")'" />
+    <h1> </h1>
+</div>
+<div>
+    <input type="button" value="Dodaj knjigu" onclick="location.href='@Url.Action("Create", "Knjiga")'" />
+    <h1> </h1>
+</div>
+<div>
+    <input type="button" value="Pregledaj knjige" onclick="location.href='@Url.Action("Index", "Knjiga")'" />
+    <h1> </h1>
+</div>
+<div>
+    <input type="button" value="Izbrisi knjigu" onclick="location.href='@Url.Action("DeleteKnjiga", "Knjiga")'" />
+    <h1> </h1>
+</div>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using BibliotekaOOAD.Models;
 
 namespace BibliotekaOOAD.Data
 {
@@ -12,5 +13,6 @@ namespace BibliotekaOOAD.Data
             : base(options)
         {
         }
+        public DbSet<BibliotekaOOAD.Models.Administrator> Administrator { get; set; }
     }
 }

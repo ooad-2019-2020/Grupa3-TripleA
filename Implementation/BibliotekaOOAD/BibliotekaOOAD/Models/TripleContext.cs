@@ -45,5 +45,17 @@ namespace AspNetCoreMVC.Models
             modelBuilder.Entity<VipKorisnikDb>().ToTable("VipKorisnik");
             modelBuilder.Entity<Zanr>().ToTable("Zanr");
         }
+
+        //Ova funkcija se koriste da bi se ukinulo automatsko dodavanje množine u nazive
+        public DbSet<BibliotekaOOAD.Models.Administrator> Administrator { get; set; }
+
+        //Ova funkcija se koriste da bi se ukinulo automatsko dodavanje množine u nazive
+        public DbSet<BibliotekaOOAD.Models.Bibliotekar> Bibliotekar { get; set; }
+
+        //Ova funkcija se koriste da bi se ukinulo automatsko dodavanje množine u nazive
+        public DbSet<BibliotekaOOAD.Models.ObicniKorisnik> ObicniKorisnik { get; set; }
+
+        //Ova funkcija se koriste da bi se ukinulo automatsko dodavanje množine u nazive
+        public DbSet<BibliotekaOOAD.Models.VipKorisnik> VipKorisnik { get; set; }
     }
 }

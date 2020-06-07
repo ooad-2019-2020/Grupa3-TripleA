@@ -1,0 +1,73 @@
+﻿@model IEnumerable<BibliotekaOOAD.Models.ObicniKorisnik>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create ObicnogKorisnika</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.KorisnickoIme)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lozinka)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prezime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KrajVazenjaClanarine)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.KorisnickoIme)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lozinka)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prezime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KrajVazenjaClanarine)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Otkazi clanstvo</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

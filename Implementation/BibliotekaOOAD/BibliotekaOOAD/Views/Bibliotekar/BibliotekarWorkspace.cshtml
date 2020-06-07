@@ -1,0 +1,34 @@
+﻿@model BibliotekaOOAD.Models.Bibliotekar
+
+@{
+    ViewData["Title"] = "Workspace";
+}
+
+<h1>Bibliotekar</h1>
+<div style="float:left; width:50%;">
+    <div>
+        <input type="button" value="Kreiraj sedmicnu preporuku" onclick="location.href='@Url.Action("SedmicnaPreporuka", "Bibliotekar")'" />
+        <h1> </h1>
+    </div>
+    <div>
+        <input type="button" value="Pregledaj zahtjeve za rezervaciju" onclick="location.href='@Url.Action("PregledZahtjevaRezervacija", "Bibliotekar")'" />
+        <h1> </h1>
+    </div>
+    <div>
+        <input type="button" value="Pregledaj zahtjeve za obicno clanstvo" onclick="location.href='@Url.Action("ZahtjevObicnogClanstva", "ObicniKorisnik")'" />
+        <h1> </h1>
+    </div>
+    <div>
+        <input type="button" value="Pregledaj zahtjeve za vip clanstvo" onclick="location.href='@Url.Action("ZahtjevVipClanstva", "VipKorisnik")'" />
+        <h1> </h1>
+    </div>
+    <div>
+        <input type="button" value="Dodaj citat dana" onclick="location.href='@Url.Action("CitatDana", "Bibliotekar")'" />
+        <h1> </h1>
+    </div>
+</div>
+
+<div style="float:right; width:50%;">
+    <img src="https://previews.123rf.com/images/goodshotalan/goodshotalan1006/goodshotalan100600032/7259912-funny-librarian-cartoon.jpg" alt="Slika se nije mogla ucitati"
+         style="width:50%; height:200px; padding-bottom:3%">
+</div>
