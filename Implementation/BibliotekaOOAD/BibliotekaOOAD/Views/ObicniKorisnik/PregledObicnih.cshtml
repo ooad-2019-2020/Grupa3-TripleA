@@ -1,0 +1,50 @@
+﻿@model IEnumerable<BibliotekaOOAD.Models.ObicniKorisnik>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Pregled obicnih korisnika</title>
+</head>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.KorisnickoIme)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.KrajVazenjaClanarine)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KorisnickoIme)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KrajVazenjaClanarine)
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@item.Id">Izbrisi</a>
+                </td>
+                <td>
+                    <input type="button" value="Obavijesti" onclick="location.href='@Url.Action("SendObavijest", "Administrator")'" />
+                </td>
+                <td></td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
+

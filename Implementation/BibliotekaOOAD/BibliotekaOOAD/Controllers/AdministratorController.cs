@@ -43,26 +43,6 @@ namespace BibliotekaOOAD.Controllers
             return View(administrator);
         }
 
-        // GET: Administrator/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Administrator/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BrojLoginova,Id,Lozinka,Ime,Prezime,Email")] Administrator administrator)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(administrator);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(administrator);
-        }
-
         // GET: Administrator/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {

@@ -1,0 +1,31 @@
+﻿@model BibliotekaOOAD.Models.Knjiga
+
+@{
+    ViewData["Title"] = "Zahtjev za rezervaciju";
+}
+
+<h1>Bibliotekar</h1>
+<div style="float:left; width:30%;">
+    <img src="https://healthylocavore.com/wp-content/uploads/2016/11/book-placeholder.jpg" alt="Slika se nije mogla ucitati"
+         style="width:70%; height:300px; padding-bottom:3%">
+    <div>
+        <input type="button" value="Posaljite zahtjev za rezervaciju" onclick="location.href='@Url.Action("ZahtjevRezervacije", "Knjiga")'" />
+        <h1> </h1>
+    </div>
+</div>
+
+<div style="float:right; width:70%;">
+    <div>
+        <h4>Naslov</h4>
+        <h1> </h1>
+    </div>
+    <div>
+        <h4>Autor</h4>
+        <h1> </h1>
+    </div>
+    <div>
+        <h4>Opis</h4>
+        <h1> </h1>
+    </div>
+</div>
+

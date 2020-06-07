@@ -21,6 +21,12 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Prezime)
                 </th>
+                <th>
+                    <input type="button" value="Odobri" onclick="location.href='@Url.Action("Odobreno", "Bibliotekar")'" />
+                </th>
+                <th>
+                    <input type="button" value="Odbij" onclick="location.href='@Url.Action("Odbijeno", "Bibliotekar")'" />
+                </th>
                 <th></th>
             </tr>
         </thead>
@@ -34,12 +40,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Prezime)
                 </td>
-                <td>
-                    <input type="button" value="Odobri" onclick="location.href='@Url.Action("Odobreno", "Bibliotekar")'" />
-                </td>
-                <td>
-                    <input type="button" value="Odbij" onclick="location.href='@Url.Action("Odbijeno", "Bibliotekar")'" />
-                </td>
+                
             </tr>
             }
         </tbody>

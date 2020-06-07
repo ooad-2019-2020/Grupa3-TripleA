@@ -25,6 +25,11 @@ namespace BibliotekaOOAD.Controllers
             return View(await _context.ObicniKorisnik.ToListAsync());
         }
 
+        public async Task<IActionResult> PregledObicnih()
+        {
+            return View(await _context.ObicniKorisnik.ToListAsync());
+        }
+
         public async Task<IActionResult> ZahtjevObicnogClanstva()
         {
             return View(await _context.ObicniKorisnik.ToListAsync());

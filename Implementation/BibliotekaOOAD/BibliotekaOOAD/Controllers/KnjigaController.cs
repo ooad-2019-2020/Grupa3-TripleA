@@ -30,6 +30,11 @@ namespace BibliotekaOOAD.Controllers
             return View(await _context.Knjiga.ToListAsync());
         }
 
+        public IActionResult ZahtjevRezervacije()
+        {
+            return View();
+        }
+
         // GET: Knjiga/Details/5
         public async Task<IActionResult> Details(int? id)
         {

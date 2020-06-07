@@ -25,6 +25,10 @@ namespace BibliotekaOOAD.Controllers
             return View(await _context.VipKorisnik.ToListAsync());
         }
 
+        public async Task<IActionResult> PregledVip()
+        {
+            return View(await _context.VipKorisnik.ToListAsync());
+        }
         public async Task<IActionResult> ZahtjevVipClanstva()
         {
             return View(await _context.VipKorisnik.ToListAsync());
