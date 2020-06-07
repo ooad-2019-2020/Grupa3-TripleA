@@ -14,8 +14,7 @@ namespace BibliotekaOOAD.Models
             ICollection<Obavjestenje> obavjestenja;
             ICollection<IKnjiga> procitaneKnjige;
             DateTime krajVazenjaClanarine;
-
-        [Required(ErrorMessage = "Polje korisnicko ime je obavezno")]
+        [RegularExpression("^[A-Za-z0-9_-]*$", ErrorMessage = "Korisnicko ime smije sadrzavati samo slova i cifre!")]
         public string KorisnickoIme { get => korisnickoIme; set => korisnickoIme = value; }
         public Racun Racun { get => racun; set => racun = value; }
         public DateTime DatumRodjenja { get => datumRodjenja; set => datumRodjenja = value; }

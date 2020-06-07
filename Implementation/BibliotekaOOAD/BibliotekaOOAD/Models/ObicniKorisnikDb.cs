@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,7 +16,7 @@ namespace BibliotekaOOAD.Models
         ICollection<Obavjestenje> obavjestenja;
         ICollection<IKnjiga> procitaneKnjige;
         DateTime krajVazenjaClanarine;
-
+        [RegularExpression("^[A-Za-z0-9_-]*$", ErrorMessage = "Korisnicko ime smije sadrzavati samo slova i cifre!")]
         public string KorisnickoIme { get => korisnickoIme; set => korisnickoIme = value; }
         public Racun Racun { get => racun; set => racun = value; }
         public DateTime DatumRodjenja { get => datumRodjenja; set => datumRodjenja = value; }

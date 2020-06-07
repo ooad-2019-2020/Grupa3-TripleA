@@ -4,14 +4,16 @@ using AspNetCoreMVC.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BibliotekaOOAD.Migrations
 {
     [DbContext(typeof(TripleContext))]
-    partial class TripleContextModelSnapshot : ModelSnapshot
+    [Migration("20200607114525_Migracija2")]
+    partial class Migracija2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -43,6 +45,7 @@ namespace BibliotekaOOAD.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Info")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasIndex("AdministratorId");
@@ -96,6 +99,7 @@ namespace BibliotekaOOAD.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Naslov")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Opis")
@@ -154,6 +158,7 @@ namespace BibliotekaOOAD.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Tekst")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -210,6 +215,7 @@ namespace BibliotekaOOAD.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Ime")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Lozinka")
@@ -339,6 +345,7 @@ namespace BibliotekaOOAD.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("KorisnickoIme")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("KrajVazenjaClanarine")

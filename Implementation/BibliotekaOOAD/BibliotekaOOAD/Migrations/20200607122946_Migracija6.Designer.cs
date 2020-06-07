@@ -4,14 +4,16 @@ using AspNetCoreMVC.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BibliotekaOOAD.Migrations
 {
     [DbContext(typeof(TripleContext))]
-    partial class TripleContextModelSnapshot : ModelSnapshot
+    [Migration("20200607122946_Migracija6")]
+    partial class Migracija6
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
